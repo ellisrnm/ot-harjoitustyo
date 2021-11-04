@@ -1,4 +1,4 @@
-# Ohjelmistotekniikka-kurssin harjoitustyö
+# Ohjelmistotekniikka, harjoitustyö
 
 Tämä repositorio on tehty Helsingin Yliopiston kurssia __Ohjelmistotekniikka__ varten
 
