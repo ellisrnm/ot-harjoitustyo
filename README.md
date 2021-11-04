@@ -4,7 +4,7 @@ Tämä repositorio on tehty Helsingin Yliopiston kurssia __Ohjelmistotekniikka__
 
 Kansiosta _laskarit_ löytyy kurssille tehdyt viikkotehtävät
 
-## Tehtävät 
+# Viikkotehtävät 
 
 ### Viikko 1
 
