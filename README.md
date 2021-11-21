@@ -1,10 +1,18 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Ohjelmistotekniikka
 
 Tämä repositorio on tehty Helsingin Yliopiston kurssia __Ohjelmistotekniikka__ varten
 
 Kansiosta _laskarit_ löytyy kurssille tehdyt viikkotehtävät
 
-# Viikkotehtävät 
+## Harjoitustyö
+
+Bugiseurantasovellus
+
+[Määrittelydokumentti](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+[Työaikakirjanpito](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+
+## Viikkotehtävät 
 
 ### Viikko 1
 
