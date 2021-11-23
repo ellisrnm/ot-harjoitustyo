@@ -1,35 +1,30 @@
 # Ohjelmistotekniikka
 
-Tämä repositorio on tehty Helsingin Yliopiston kurssia __Ohjelmistotekniikka__ varten
+Tämä repositorio on tehty Helsingin Yliopiston kurssia Ohjelmistotekniikka varten
 
-Kansiosta _laskarit_ löytyy kurssille tehdyt viikkotehtävät
+## Bugiseurantasovellus
 
-## Harjoitustyö
+Sovelluksen avulla sovelluksen käyttäjä voi pitää kirjaa ohjelmointiprojekteistansa ja niissä ilmenneistä virheistä/kehityskohteista. Tällä hetkellä sovelluksella on vain yksi käyttäjä.
 
-Bugiseurantasovellus
+Tällä hetkellä sovellukseen voi tallentaa projekteja, aliprojekteja ja bugeja (ainoastaan niiden nimi). Tiedot eivät kuitenkaan vielä tallennu vaan häviävät, kun sovelluksen sulkee. Tämä korjataan seuraavaksi.
 
-[Määrittelydokumentti](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+Sovelluksen toiminta on testattu Python-versiolla 3.8.
 
-[Työaikakirjanpito](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+### Dokumentaatio
 
-## Viikkotehtävät 
+- [Määrittelydokumentti](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+- [Työaikakirjanpito](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-### Viikko 1
+### Ohjelman suorittaminen
 
-[gitlog.txt](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+Ohjelman suoritus onnistuu komennolla:
 
-[komentorivi.txt](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+        poetry run invoke start
 
-### Viikko 2
+Ohjelman testien suoritus onnistuu komennolla:
 
-Warm up tasks (task 1)
+        poetry run invoke test
 
-[maksukortti](https://github.com/ellisrnm/ot-harjoitustyo/tree/master/laskarit/viikko2/maksukortti)
+Testikattavuusraportin generointi onnistuu komennolla:
 
-Other tasks (tasks 2-5)
-
-[unicafe](https://github.com/ellisrnm/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe)
-
-Screenshot of test coverage in the end (task 6)
-
-[coverage.png](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/laskarit/viikko2/coverage.png) 
+        poetry run invoke coverage-report
