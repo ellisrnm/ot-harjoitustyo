@@ -9,9 +9,13 @@ class Project:
 
 class SubProject:
     """Luo uuden aliprojektin"""
-    def __init__(self, name, description):
+    def __init__(self, name, description=""):
         self.name = name
         self.description = description
+        self.bugs = []
+
+    def report_bug(self, name, description="", priority="Low"):
+        self.bugs.append(Bug(name, description, priority))
 
 class Bug:
     """Luo uuden raportoidun virheen"""
