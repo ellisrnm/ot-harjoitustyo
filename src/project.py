@@ -2,6 +2,10 @@ class Project:
     """Luo uuden projektin sovellukseen"""
     def __init__(self, name):
         self.name = name
+        self.subprojects = []
+
+    def create_subproject(self, name):
+        self.subprojects.append(SubProject(name))
 
 class SubProject:
     """Luo uuden aliprojektin"""
