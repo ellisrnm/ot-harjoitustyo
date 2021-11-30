@@ -15,16 +15,36 @@ Sovelluksen toiminta on testattu Python-versiolla 3.8.
 - [Määrittelydokumentti](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 - [Työaikakirjanpito](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+### Aloitus
+
+Varmista, että poetry on asennettuna ja *poetry*-komento on suoritettavissa. Poetryn asennus *PATH*-muuttujaan onnistuu esimerkiksi komennolla:
+
+        source $HOME/.poetry/env
+
+Alusta projekti ja asenna riippuvuudet komennolla:
+
+        poetry install
+
+Siirry suorittamaan koodi virtuaaliympäristössä:
+
+        poetry shell
+
 ### Ohjelman suorittaminen
 
 Ohjelman suoritus onnistuu komennolla:
 
         poetry run invoke start
 
-Ohjelman testien suoritus onnistuu komennolla:
+### Ohjelman testaaminen
+
+Ohjelman testit suoritetaan komennolla:
 
         poetry run invoke test
 
-Testikattavuusraportin generointi onnistuu komennolla:
+Testikattavuusraportin voi luoda komennolla:
 
         poetry run invoke coverage-report
+
+Avaa raportti komennolla:
+
+        open htmlcov/index.html
