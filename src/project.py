@@ -20,6 +20,6 @@ class SubProject:
 class Bug:
     """Luo uuden raportoidun virheen"""
     def __init__(self, name, description, priority):
-        self.bug = name
+        self.name = name
         self.description = description
         self.priority = priority
