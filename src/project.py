@@ -17,6 +17,11 @@ class SubProject:
     def report_bug(self, name, description="", priority="Low"):
         self.bugs.append(Bug(name, description, priority))
 
+    def change_bug_priority(self, name, new_priority):
+        for bug in self.bugs:
+            if bug.name == name:
+                bug.priority = new_priority
+
 class Bug:
     """Luo uuden raportoidun virheen"""
     def __init__(self, name, description, priority):

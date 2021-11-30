@@ -18,6 +18,7 @@ class BugTrackerApp():
         print("4: Luo uusi aliprojekti")
         print("5: Tulosta aliprojektin bugit")
         print("6: Raportoi uusi bugi")
+        print("7: Vaihda bugin prioriteettia")
 
         while True:
             print("")
@@ -71,6 +72,25 @@ class BugTrackerApp():
                         for subproject in project.subprojects:
                             if subproject.name==subproject_name:
                                 subproject.report_bug(bug_name, bug_desc, bug_priority)
+            elif command == "7":
+                project_name = input("Valitse ensin projekti: ")
+                subproject_name = input("Valitse vielä aliprojekti: ")
+                bug_name = input("Valitse bugin nimi:")
+                print("Valitse prioriteetti")
+                print("L: Low")
+                print("M: Medium")
+                print("H: High")
+                while True:
+                    new_priority = input("Anna bugin uusi prioriteetti: ")
+                    if new_priority in ("L","M","H"):
+                        break
+                    else:
+                        print("Syöte ei kelpaa")
+                for project in self.__projects:
+                    if project.name==project_name:
+                        for subproject in project.subprojects:
+                            if subproject.name==subproject_name:
+                                subproject.change_bug_priority(bug_name, new_priority)
             else:
                 print("Komento ei käytössä")
 
