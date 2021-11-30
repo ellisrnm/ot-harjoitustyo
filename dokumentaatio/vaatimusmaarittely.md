@@ -12,8 +12,8 @@ Alkuvaiheessa sovelluksella on ainoastaan normaali käyttäjärooli.
 
 - [x] Käyttäjä voi luoda uusia projekteja ja aliprojekteja
 - [x] Käyttäjä voi luoda uuden virhehavainnon ja määritellä sen kriittisyyden
-- [/] Virhehavainnolle voi kirjoittaa kuvauksen ja sitä voi muuttaa (Jatkokehitys: muutosmahdollisuus puuttuu)
-- [/] Käyttäjä näkee kaikki projektin virhehavainnot tärkeysjärjestyksessä (Jatkokehitys: tärkeysjärjestys puuttuu)
+- [x] Virhehavainnolle voi kirjoittaa kuvauksen ja sitä voi muuttaa (**Jatkokehitys**: muutosmahdollisuus puuttuu)
+- [x] Käyttäjä näkee kaikki projektin virhehavainnot tärkeysjärjestyksessä (**Jatkokehitys**: tärkeysjärjestys puuttuu)
 - [x] Käyttäjä voi muuttaa virhehavainnon prioriteettia
 - [ ] Virhehavainnolla on muutettavissa oleva tilastatus, joka määrittelee missä vaiheessa korjaus on
 - [ ] Käyttäjä voi merkitä virheen korjatuksi, jolloin se häviää näkyviltä
