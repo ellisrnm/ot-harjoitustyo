@@ -51,7 +51,7 @@ class BugTrackerApp():
                         for subproject in project.subprojects:
                             if subproject.name==subproject_name:
                                 for bug in subproject.bugs:
-                                    print(bug.priority, ':', bug.name, bug.description)
+                                    print(bug.status, ',', bug.priority, ':', bug.name, bug.description)
             elif command == "6":
                 project_name = input("Valitse ensin projekti: ")
                 subproject_name = input("Valitse vielä aliprojekti: ")
