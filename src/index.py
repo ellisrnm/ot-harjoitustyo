@@ -16,7 +16,8 @@ class BugTrackerApp():
         print("2: Luo uusi projekti")
         print("3: Tulosta projektin aliprojektit")
         print("4: Luo uusi aliprojekti")
-        print("5: Raportoi uusi bugi")
+        print("5: Tulosta aliprojektin bugit")
+        print("6: Raportoi uusi bugi")
 
         while True:
             print("")
@@ -44,12 +45,32 @@ class BugTrackerApp():
             elif command == "5":
                 project_name = input("Valitse ensin projekti: ")
                 subproject_name = input("Valitse vielä aliprojekti: ")
-                bug_name = input("Nimeä löytynyt bugi: ")
                 for project in self.__projects:
                     if project.name==project_name:
                         for subproject in project.subprojects:
                             if subproject.name==subproject_name:
-                                subproject.report_bug(bug_name)
+                                for bug in subproject.bugs:
+                                    print(bug.priority, ':', bug.name, bug.description)
+            elif command == "6":
+                project_name = input("Valitse ensin projekti: ")
+                subproject_name = input("Valitse vielä aliprojekti: ")
+                bug_name = input("Nimeä löytynyt bugi: ")
+                bug_desc = input("Kuvaile löytynyttä bugia: ")
+                print("Valitse prioriteetti")
+                print("L: Low")
+                print("M: Medium")
+                print("H: High")
+                while True:
+                    bug_priority = input("Anna bugin prioriteetti: ")
+                    if bug_priority in ("L","M","H"):
+                        break
+                    else:
+                        print("Syöte ei kelpaa")
+                for project in self.__projects:
+                    if project.name==project_name:
+                        for subproject in project.subprojects:
+                            if subproject.name==subproject_name:
+                                subproject.report_bug(bug_name, bug_desc, bug_priority)
             else:
                 print("Komento ei käytössä")
 
