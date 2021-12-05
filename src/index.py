@@ -64,6 +64,12 @@ class BugTrackerApp():
                 while True:
                     bug_priority = input("Anna bugin prioriteetti: ")
                     if bug_priority in ("L","M","H"):
+                        if bug_priority == "L":
+                            bug_priority = "Low"
+                        elif bug_priority == "M":
+                            bug_priority = "Medium"
+                        elif bug_priority == "H":
+                            bug_priority = "High"
                         break
                     else:
                         print("Syöte ei kelpaa")
@@ -83,6 +89,12 @@ class BugTrackerApp():
                 while True:
                     new_priority = input("Anna bugin uusi prioriteetti: ")
                     if new_priority in ("L","M","H"):
+                        if new_priority == "L":
+                            new_priority = "Low"
+                        elif new_priority == "M":
+                            new_priority = "Medium"
+                        elif new_priority == "H":
+                            new_priority = "High"
                         break
                     else:
                         print("Syöte ei kelpaa")
@@ -90,6 +102,7 @@ class BugTrackerApp():
                     if project.name==project_name:
                         for subproject in project.subprojects:
                             if subproject.name==subproject_name:
+                                subproject.sort_bug_list()
                                 subproject.change_bug_priority(bug_name, new_priority)
             else:
                 print("Komento ei käytössä")
