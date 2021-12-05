@@ -4,6 +4,9 @@ src/tests/__pycache__
 .coverage
 htmlcov
 
+# data
+data/database.sqlite
+
 # laskarit
 /laskarit/viikko2/unicafe/.pytest_cache
 /laskarit/viikko2/__MACOSX/
