@@ -5,6 +5,7 @@ htmlcov
 
 # data
 data/database.sqlite
+data/test-database.sqlite
 
 # laskarit
 /laskarit/viikko2/unicafe/.pytest_cache
