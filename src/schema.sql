@@ -11,7 +11,8 @@ CREATE TABLE SubProjects (
     id SERIAL PRIMARY KEY,
     name TEXT, 
     description TEXT,
-    project_id REFERENCES Projects
+    project_id REFERENCES Projects,
+    UNIQUE (project_id, name)
 );
 
 CREATE TABLE Bugs (
@@ -20,5 +21,6 @@ CREATE TABLE Bugs (
     description TEXT,
     priority INTEGER,
     status INTEGER,
-    subproject_id REFERENCES SubProjects
+    subproject_id REFERENCES SubProjects,
+    UNIQUE (subproject_id, name)
 );
