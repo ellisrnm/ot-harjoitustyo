@@ -1,15 +1,10 @@
-#from project import Project
-from initialize_database import initialize_db
+from repositories.bug_repository import bug_repository
 from repositories.project_repository import project_repository
 from repositories.subproject_repository import subproject_repository
 
 class BugTrackerApp():
     def __init__(self):
-        initialize_db()
-    #    self.__projects = []
-
-    #def create_project(self, name):
-    #    self.__projects.append(Project(name))
+        pass
 
     def start(self):
 
@@ -37,28 +32,26 @@ class BugTrackerApp():
                 project_repository.create(project_name)
             elif command == "3":
                 project_name = input("Valitse ensin projekti: ")
-                for project in project_repository.fetch_all():
-                    if project.name==project_name:
-                        for subproject in subproject_repository.fetch_all_from_project(project.id):
-                            print(subproject.name)
+                project_id = project_repository.get_project_id(project_name)
+                for subproject in subproject_repository.fetch_all_from_project(project_id):
+                    print(subproject.name)
             elif command == "4":
                 project_name = input("Valitse ensin projekti: ")
+                project_id = project_repository.get_project_id(project_name)
                 subproject_name = input("Nimeä aliprojekti: ")
-                for project in project_repository.fetch_all():
-                    if project.name==project_name:
-                        subproject_repository.create(subproject_name)
+                subproject_repository.create(subproject_name, project_id)
             elif command == "5":
                 project_name = input("Valitse ensin projekti: ")
+                project_id = project_repository.get_project_id(project_name)
                 subproject_name = input("Valitse vielä aliprojekti: ")
-                for project in project_repository.fetch_all():
-                    if project.name==project_name:
-                        for subproject in subproject_repository.fetch_all_from_project(project.id):
-                            if subproject.name==subproject_name:
-                                for bug in subproject.bugs:
-                                    print(bug.status, ',', bug.priority, ':', bug.name, bug.description)
+                subproject_id = subproject_repository.get_subproject_id(project_id, subproject_name)
+                for bug in bug_repository.fetch_all_from_subproject(subproject_id):
+                    print(bug.status, ',', bug.priority, ':', bug.name, bug.description)
             elif command == "6":
                 project_name = input("Valitse ensin projekti: ")
+                project_id = project_repository.get_project_id(project_name)
                 subproject_name = input("Valitse vielä aliprojekti: ")
+                subproject_id = subproject_repository.get_subproject_id(project_id, subproject_name)
                 bug_name = input("Nimeä löytynyt bugi: ")
                 bug_desc = input("Kuvaile löytynyttä bugia: ")
                 print("Valitse prioriteetti")
@@ -69,22 +62,20 @@ class BugTrackerApp():
                     bug_priority = input("Anna bugin prioriteetti: ")
                     if bug_priority in ("L","M","H"):
                         if bug_priority == "L":
-                            bug_priority = "Low"
+                            bug_priority = 3
                         elif bug_priority == "M":
-                            bug_priority = "Medium"
+                            bug_priority = 2
                         elif bug_priority == "H":
-                            bug_priority = "High"
+                            bug_priority = 1
                         break
                     else:
                         print("Syöte ei kelpaa")
-                for project in self.__projects:
-                    if project.name==project_name:
-                        for subproject in project.subprojects:
-                            if subproject.name==subproject_name:
-                                subproject.report_bug(bug_name, bug_desc, bug_priority)
+                bug_repository.report_bug(bug_name, subproject_id, bug_desc, bug_priority)
             elif command == "7":
                 project_name = input("Valitse ensin projekti: ")
+                project_id = project_repository.get_project_id(project_name)
                 subproject_name = input("Valitse vielä aliprojekti: ")
+                subproject_id = subproject_repository.get_subproject_id(project_id, subproject_name)
                 bug_name = input("Valitse bugin nimi:")
                 print("Valitse prioriteetti")
                 print("L: Low")
@@ -94,20 +85,16 @@ class BugTrackerApp():
                     new_priority = input("Anna bugin uusi prioriteetti: ")
                     if new_priority in ("L","M","H"):
                         if new_priority == "L":
-                            new_priority = "Low"
+                            new_priority = 3
                         elif new_priority == "M":
-                            new_priority = "Medium"
+                            new_priority = 2
                         elif new_priority == "H":
-                            new_priority = "High"
+                            new_priority = 1
                         break
                     else:
                         print("Syöte ei kelpaa")
-                for project in self.__projects:
-                    if project.name==project_name:
-                        for subproject in project.subprojects:
-                            if subproject.name==subproject_name:
-                                subproject.sort_bug_list()
-                                subproject.change_bug_priority(bug_name, new_priority)
+                bug_id = bug_repository.get_bug_id(subproject_id, bug_name)
+                bug_repository.change_priority(bug_id, new_priority)
             else:
                 print("Komento ei käytössä")
 

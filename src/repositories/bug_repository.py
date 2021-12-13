@@ -4,7 +4,7 @@ from entities.bug import Bug
 def bug_by_row(row):
     if not row:
         return None 
-    return Bug(row["id"], row["name"], row["description"], row["priority"], row["status"])
+    return Bug(row["id"], row["name"], row["description"], row["priority"], row["status"], row["subproject_id"])
 
 class BugRepository:
     def __init__(self, connection):
@@ -19,9 +19,16 @@ class BugRepository:
 
     def report_bug(self, name, subproject_id, description="", priority=3, status=0):
         cursor = self._connection.cursor()
-        sql = "INSERT INTO Bugs (name, description, priority, status, subproject_id) VALUES ?, ?, ?, ?, ?)"
+        sql = "INSERT INTO Bugs (name, description, priority, status, subproject_id) VALUES (?, ?, ?, ?, ?)"
         cursor.execute(sql, (name, description, priority, status, subproject_id))
         self._connection.commit()
+
+    def get_bug_id(self, subproject_id, bug_name):
+        cursor = self._connection.cursor()
+        sql = "SELECT id FROM Bugs WHERE subproject_id=? AND name=?;"
+        cursor.execute(sql, (subproject_id, bug_name))
+        bug_id = cursor.fetchone()[0]
+        return bug_id
 
     def change_priority(self, bug_id, new_priority):
         cursor = self._connection.cursor()

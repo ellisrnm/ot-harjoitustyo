@@ -23,4 +23,11 @@ class ProjectRepository:
         rows = cursor.fetchall()
         return list(map(project_by_row, rows))
 
+    def get_project_id(self, project_name):
+        cursor = self._connection.cursor()
+        sql = "SELECT id FROM Projects WHERE name=?"
+        cursor.execute(sql, (project_name,))
+        project_id = cursor.fetchone()[0]
+        return project_id
+
 project_repository = ProjectRepository(get_db_connection())
