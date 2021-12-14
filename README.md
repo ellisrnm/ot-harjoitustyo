@@ -13,6 +13,7 @@ Sovelluksen toiminta on testattu Python-versiolla 3.8.
 ### Release
 
 - [Viikon 5 release](https://github.com/ellisrnm/ot-harjoitustyo/releases/tag/viikko5)
+- [Viikon 6 release](https://github.com/ellisrnm/ot-harjoitustyo/releases/tag/viikko6)
 
 ### Dokumentaatio
 
