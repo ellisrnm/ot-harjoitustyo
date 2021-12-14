@@ -33,7 +33,15 @@ Siirry suorittamaan koodi virtuaaliympäristössä:
 
         poetry shell
 
+Alusta tietokanta komennolla:
+
+        python3 src/initialize_database.py
+
 ### Ohjelman suorittaminen
+
+Alusta tietokanta komennolla:
+
+        python3 src/initialize_database.py
 
 Ohjelman suoritus onnistuu komennolla:
 

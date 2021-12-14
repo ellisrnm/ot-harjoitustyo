@@ -12,7 +12,8 @@
 | 5.12. | 2 | Harjoitustyön laajentaminen uusilla vaatimuksilla |
 | 5.12. | 4 | Tietokannan käyttöönoton materiaalin läpikäynti ja tietokannan alustus koodiin (add-database branch) |
 | 7.12. | 5 | Harjoitustyön muokkaaminen käyttämään tietokantaa ja koodin jaettelua eri tiedostoihin (add-database branch) |
+| 11.12. | 2 | Harjoitustyön tietokannan käytön debuggaus |
+| 13.12. | 6 | Harjoitustyön muokaaminen käyttämään tietokantaa |
+| 14.12. | 2 | Korjauksia tietokannan käyttöön testauksessa |
 
-Yhteensä: 26 h
-
-Palautus 7.12. Tällä hetkellä tietokannan käyttö ei vielä toimi asianmukaisesti joten en ole vienyt muutoksia master branchiin
+Yhteensä: 36 h

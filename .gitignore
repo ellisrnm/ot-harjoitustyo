@@ -1,8 +1,11 @@
 # harjoitustyö
-src/__pycache__
-src/tests/__pycache__
+__pycache__
 .coverage
 htmlcov
+
+# data
+data/database.sqlite
+data/test-database.sqlite
 
 # laskarit
 /laskarit/viikko2/unicafe/.pytest_cache
