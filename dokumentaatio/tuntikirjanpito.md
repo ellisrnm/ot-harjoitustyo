@@ -15,5 +15,8 @@
 | 11.12. | 2 | Harjoitustyön tietokannan käytön debuggaus |
 | 13.12. | 6 | Harjoitustyön muokaaminen käyttämään tietokantaa |
 | 14.12. | 2 | Korjauksia tietokannan käyttöön testauksessa |
+| 20.12. | 4 | Alustavan UI:n suunnittelu ja koodin toteutus |
+| 21.12. | 8 | Sovelluksen yhdistäminen UI:hin sekä sovelluksen muutoksia UI:n kanssa yhteensopivaksi | 
+| 25.12. | 2 | Pieniä korjauksia ja koodin siistimistä |
 
-Yhteensä: 36 h
+Yhteensä: 50 h
