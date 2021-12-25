@@ -4,9 +4,7 @@ Tämä repositorio on tehty Helsingin Yliopiston kurssia Ohjelmistotekniikka var
 
 ## Bugiseurantasovellus
 
-Sovelluksen avulla sovelluksen käyttäjä voi pitää kirjaa ohjelmointiprojekteistansa ja niissä ilmenneistä virheistä/kehityskohteista. Tällä hetkellä sovelluksella on vain yksi käyttäjä.
-
-Tällä hetkellä sovellukseen voi tallentaa projekteja, aliprojekteja ja bugeja (ainoastaan niiden nimi). Tiedot eivät kuitenkaan vielä tallennu vaan häviävät, kun sovelluksen sulkee. Tämä korjataan seuraavaksi.
+Sovelluksen avulla sovelluksen käyttäjä voi pitää kirjaa ohjelmointiprojekteistansa ja niissä ilmenneistä virheistä/kehityskohteista.
 
 Sovelluksen toiminta on testattu Python-versiolla 3.8.
 
@@ -39,10 +37,6 @@ Alusta tietokanta komennolla:
         python3 src/initialize_database.py
 
 ### Ohjelman suorittaminen
-
-Alusta tietokanta komennolla:
-
-        python3 src/initialize_database.py
 
 Ohjelman suoritus onnistuu komennolla:
 
