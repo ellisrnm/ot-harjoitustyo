@@ -3,7 +3,7 @@ from entities.subproject import SubProject
 
 def subproject_by_row(row):
     if not row:
-        return None 
+        return None
     return SubProject(row["id"], row["name"], row["description"], row["project_id"])
 
 class SubProjectRepository:#

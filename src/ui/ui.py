@@ -1,4 +1,3 @@
-from tkinter import Tk
 from ui.project_view import ProjectView
 from ui.subproject_view import SubProjectView
 from ui.bugs_view import BugView
@@ -7,6 +6,8 @@ class UI:
     def __init__(self, root):
         self._root = root
         self._current_view = None
+        self._project_name = None
+        self._subproject_name = None
 
     def start(self):
         self._show_projects_view()
@@ -28,7 +29,7 @@ class UI:
     def _show_subprojects_view(self, project_name=None):
         if not project_name:
             self._project_name = self._current_view.get_value()
-        else: 
+        else:
             self._project_name = project_name
         self._hide_current_view()
         self._current_view = SubProjectView(
@@ -44,7 +45,7 @@ class UI:
         if not project_name:
             self._project_name = self._current_view.get_project()
             self._subproject_name = self._current_view.get_value()
-        else: 
+        else:
             self._project_name = project_name
             self._subproject_name = subproject_name
         self._hide_current_view()

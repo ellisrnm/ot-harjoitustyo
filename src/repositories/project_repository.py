@@ -3,7 +3,7 @@ from entities.project import Project
 
 def project_by_row(row):
     if not row:
-        return None 
+        return None
     return Project(row["id"], row["name"])
 
 class ProjectRepository:

@@ -8,7 +8,7 @@ try:
 except FileNotFoundError:
     pass
 
-db_file_name = str(os.getenv('DATABASE_FILENAME')) 
+db_file_name = str(os.getenv('DATABASE_FILENAME'))
 db_file_path = os.path.join(dirname, "..", "data", db_file_name)
 connection = sqlite3.connect(db_file_path)
 connection.row_factory = sqlite3.Row
