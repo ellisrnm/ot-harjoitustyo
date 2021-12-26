@@ -12,10 +12,12 @@ Sovelluksen toiminta on testattu Python-versiolla 3.8.
 
 - [Viikon 5 release](https://github.com/ellisrnm/ot-harjoitustyo/releases/tag/viikko5)
 - [Viikon 6 release](https://github.com/ellisrnm/ot-harjoitustyo/releases/tag/viikko6)
+- [Loppupalautus](https://github.com/ellisrnm/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ### Dokumentaatio
 
 - [Määrittelydokumentti](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+- [Käyttöohje](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 - [Työaikakirjanpito](https://github.com/ellisrnm/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 ### Aloitus
