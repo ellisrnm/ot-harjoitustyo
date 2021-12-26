@@ -6,22 +6,22 @@ class TestSubProjectRepository(unittest.TestCase):
     def setUp(self):
         initialize_db()
 
-    def test_project_is_created(self):
+    def test_subproject_is_created(self):
         subproject_repository.create("Subproject_1", 1)
         subproject_repository.create("Subproject_2", 1)
         subproject_repository.create("Subproject_1", 2)
         subprojects = subproject_repository.fetch_all_from_project(1)
         self.assertEqual(len(subprojects), 2)
 
-    def test_project_information_created_correctly(self):
+    def test_subproject_information_created_correctly(self):
         subproject_repository.create("Subproject_1", 1)
         subproject_1 = subproject_repository.fetch_all_from_project(1)[0]
-        self.assertEqual(subproject_1.id, 1)
+        self.assertEqual(subproject_1.subproject_id, 1)
         self.assertEqual(subproject_1.name, "Subproject_1")
         self.assertEqual(subproject_1.description, "")
         subproject_repository.create("Subproject_2", 2, "error")
         subproject_2 = subproject_repository.fetch_all_from_project(2)[0]
-        self.assertEqual(subproject_2.id, 2)
+        self.assertEqual(subproject_2.subproject_id, 2)
         self.assertEqual(subproject_2.name, "Subproject_2")
         self.assertEqual(subproject_2.description, "error")
 
@@ -38,7 +38,7 @@ class TestSubProjectRepository(unittest.TestCase):
         self.assertEqual(len(subproject_repository.fetch_all_from_project(2)), 1)
         self.assertEqual(len(subproject_repository.fetch_all_from_project(3)), 4)
 
-    def test_project_id_is_fetched_correctly(self):
+    def test_subproject_id_is_fetched_correctly(self):
         subproject_repository.create('sp_a', 1, "aa")
         subproject_repository.create('sp b', 1, "bb")
         subproject_repository.create('sp_a', 2, "aa")

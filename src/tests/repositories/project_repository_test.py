@@ -14,7 +14,7 @@ class TestProjectRepository(unittest.TestCase):
     def test_project_information_created_correctly(self):
         project_repository.create('Project_1')
         project = project_repository.fetch_all()[0]
-        self.assertEqual(project.id, 1)
+        self.assertEqual(project.project_id, 1)
         self.assertEqual(project.name, 'Project_1')
 
     def test_project_id_is_fetched_correctly(self):
