@@ -2,7 +2,7 @@ import unittest
 from initialize_database import initialize_db
 from repositories.bug_repository import bug_repository
 
-class TestSubProjectRepository(unittest.TestCase):
+class TestBugRepository(unittest.TestCase):
     def setUp(self):
         initialize_db()
 
