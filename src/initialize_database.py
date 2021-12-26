@@ -6,9 +6,10 @@ def initialize_db():
     cursor = connection.cursor()
     dirname = os.path.dirname(__file__)
     schema_file_path = os.path.join(dirname, "schema.sql")
-    cursor.executescript(open(schema_file_path, "r", encoding="utf-8").read())
+    with open(schema_file_path, "r", encoding="utf-8") as file:
+        script = file.read()
+        cursor.executescript(script)
     connection.commit()
-    schema_file_path.close()
 
 if __name__ == "__main__":
     initialize_db()
