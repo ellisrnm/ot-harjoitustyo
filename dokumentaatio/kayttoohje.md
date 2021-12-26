@@ -50,4 +50,4 @@ Kun olet luonut uuden aliprojektin, voit siirtyä tarkastelemaan sen tietoja hak
 
 Kun sinulla on aliprojektissa virhehavaintoja, näät niiden tiedot ja voit muokata niitä kohdasta *Muokkaa tietoja*. Valitse ensin dropdown-valikosta minkä bugin tietoja haluat muuttaa. Sen jälkeen voit muuttaa joko tilastatusta (Uusi/Kesken/Odottaa/Korjattu) tai prioriteettia (Vähäinen/Normaali/Korkea). Voit muuttaa kerralla vain toista. Valitse ensin dropdown-valikosta joko uusi status tai uusi prioriteetti ja sen jälkeen paina "Päivitä status" tai "Päivitä prioriteetti" riippuen siitä, kumpaa haluat muuttaa. Huomaa, että jos merkitset virhehavainnon tilasta
 
-![Virhehavaintonäkymän muutos-kohta](kuvat/virhehavaintonakyma-muutos.png)
+![Virhehavaintonäkymän muutos-kohta](kuvat/virhehavaintonakyma-muuta.png)
