@@ -26,3 +26,5 @@ Tällä hetkellä virhehavainnoille ei voi kirjoittaa tarkempaa kuvausta tai kom
 Lisäksi sovellukseen tulisi lisätä vielä tarkempia tietoja virhehavainnoista, esimerkiksi niiden korjausaikataulusta. Tällä hetkellä sovellus on tarkoitettu vain yhden henkilön käytettäväksi, mutta jatkossa virhehavaintoja voisi myös jaotella eri käyttäjille.
 
 Sovelluksen käyttöliittymää tulisi vielä parantaa käytettävämmäksi sekä lisätä etenkin enemmän tietoa virhehavainnoista.
+
+Tällä hetkellä sovelluksessa ei ole tarkastuksia siltä varalta, että käyttäjä syöttää vääränlaista tietoa. Sovellusta tulisi vielä kehittää, jotta käyttäjä saisi virheilmoituksen puutteellisista tai virheellisistä syötteistä.
