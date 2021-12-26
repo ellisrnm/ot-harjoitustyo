@@ -18,5 +18,6 @@
 | 20.12. | 4 | Alustavan UI:n suunnittelu ja koodin toteutus |
 | 21.12. | 8 | Sovelluksen yhdistäminen UI:hin sekä sovelluksen muutoksia UI:n kanssa yhteensopivaksi | 
 | 25.12. | 2 | Pieniä korjauksia ja koodin siistimistä |
+| 26.12. | 3 | Sovelluksen testausta, uusien testien lisäys ja dokumentaation päivittämistä |
 
-Yhteensä: 50 h
+Yhteensä: 53 h
